@@ -2,12 +2,13 @@
 
 The source code for HiDRA can be downloaded from <https://pubs.acs.org/doi/10.1021/acs.jcim.1c00706?goto=supporting-info>, in the supporting information section.
 
-## Python Version
+## Platform
 
 Python 3.9.7
 
 ## Details about each file and folder
-
+Please download everything below before running code. Thank you.
+### Additional Data
 expression.csv, GDSC_response.csv and geneset.gmt are in the additional folder that stores data, which can be downloaded from:
 
 expression.csv: The original gene expression provided by GDSC.
@@ -15,7 +16,7 @@ expression.csv: The original gene expression provided by GDSC.
 GDSC_response.csv: The original drug response of each drug-cell pair in LogIC50 (Though the colname is "IC50", it is LogIC50).
 
 geneset.gmt: The KEGG pathway data used in HiDRA.
-
+### contained in GitHub
 HiDRA_predict.py: The code of prediction for HiDRA's output model.
 
 HiDRA_training_xxxx.py: Codes for training HiDRA model using different types of drug molecular fingerprints (HiDRA_training.py is used for 512-bit Morgan fingerprints).
