@@ -8,6 +8,8 @@ Python 3.9.7
 
 ## Details about each file and folder
 
+expression.csv, GDSC_response.csv and geneset.gmt are in the additional folder that stores data, which can be downloaded from:
+
 expression.csv: The original gene expression provided by GDSC.
 
 GDSC_response.csv: The original drug response of each drug-cell pair in LogIC50 (Though the colname is "IC50", it is LogIC50).
