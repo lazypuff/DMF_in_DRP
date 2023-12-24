@@ -1,0 +1,11 @@
+/nas/longleaf/rhel8/apps/python/3.7.14/lib/python3.7/site-packages/numpy/lib/function_base.py:2691: RuntimeWarning: divide by zero encountered in true_divide
+  c /= stddev[:, None]
+/nas/longleaf/rhel8/apps/python/3.7.14/lib/python3.7/site-packages/numpy/lib/function_base.py:2691: RuntimeWarning: invalid value encountered in true_divide
+  c /= stddev[:, None]
+/nas/longleaf/rhel8/apps/python/3.7.14/lib/python3.7/site-packages/numpy/lib/function_base.py:2692: RuntimeWarning: divide by zero encountered in true_divide
+  c /= stddev[None, :]
+*********fold:5**********
+
+training done
+
+[12.761147364363472]   [3.5722748164668787]   [-0.6973995498066212]   [1.0]  

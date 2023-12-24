@@ -12,7 +12,7 @@ Give details on each method inside each Folder.
 
 ## Python Version
 
-ADRML: Python 3.9.7 HiDRA: Python 3.9.7 PathDSP: Python 3.9.7 PaccMann:
+ADRML: Python 3.7.14; HiDRA: Python 3.9.7; PathDSP: Python 3.9.7; PaccMann:
 
 ## Five Models
 

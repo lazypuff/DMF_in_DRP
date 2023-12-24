@@ -16,7 +16,7 @@ expression.csv: The original gene expression provided by GDSC.
 GDSC_response.csv: The original drug response of each drug-cell pair in LogIC50 (Though the colname is "IC50", it is LogIC50).
 
 geneset.gmt: The KEGG pathway data used in HiDRA.
-### contained in GitHub
+### Contained in GitHub
 HiDRA_predict.py: The code of prediction for HiDRA's output model.
 
 HiDRA_training_xxxx.py: Codes for training HiDRA model using different types of drug molecular fingerprints (HiDRA_training.py is used for 512-bit Morgan fingerprints).
