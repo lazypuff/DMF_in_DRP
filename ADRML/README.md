@@ -32,7 +32,7 @@ IF_Ogdsc_xxxx_mask_yyyy.csv: the results of three metrics for every fold in diff
 ## Example
 This example is to train the ADRML using 256-bit Morgan fingerprints under mask cell splitting.
 
-python3 /code/ADRML_IFv2_mc.py response_dirc='/data/resp_ogdsc.csv' simC_dirc='/data/simC_ogdsc_gexp.csv' simD_dirc='/data/simD_gdsc_256b.csv' fold_info='/data/fold_info_mask_cell.csv' dim=0.7 miu=8 lambda=4 CV=10 repeat=1 out_name='IF_Ogdsc_256b_mask_cell.csv'
+python3 ./code/ADRML_IFv2_mc.py response_dirc='./data/resp_ogdsc.csv' simC_dirc='./data/simC_ogdsc_gexp.csv' simD_dirc='./data/simD_gdsc_256b.csv' fold_info='./data/fold_info_mask_cell.csv' dim=0.7 miu=8 lambda=4 CV=10 repeat=1 out_name='IF_Ogdsc_256b_mask_cell.csv'
 
 response_dirc: the input response in LogIC50 for each drug-cell pair;
 
