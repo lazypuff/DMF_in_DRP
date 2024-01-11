@@ -19,15 +19,4 @@ Please download everything below before running code. Thank you.
 Training and testing data in 3 settings, mask cell, mask drug and mask combination. Smiles and gene expression data.
 
 
-### contained in GitHub
-
-
-## Example
-
-### Training
-
-
-
-### Predicting
-
 
