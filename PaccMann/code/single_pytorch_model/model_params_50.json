@@ -1,0 +1,56 @@
+{
+    "model_fn": "paccmann_v2",
+    "drug_sensitivity_min_max": false,
+    "gene_expression_standardize": false,
+    "augment_smiles": true,
+    "smiles_start_stop_token": true,
+    "number_of_genes": 2128,
+    "smiles_padding_length": 560,
+    "stacked_dense_hidden_sizes": [
+        1024,
+        512
+    ],
+    "activation_fn": "relu",
+    "dropout": 0.5,
+    "batch_norm": true,
+    "filters": [
+        64,
+        64,
+        64
+    ],
+    "multiheads": [
+        4,
+        4,
+        4,
+        4
+    ],
+    "smiles_embedding_size": 128,
+    "kernel_sizes": [
+        [
+            3,
+            128
+        ],
+        [
+            5,
+            128
+        ],
+        [
+            11,
+            128
+        ]
+    ],
+    "smiles_attention_size": 64,
+    "embed_scale_grad": false,
+    "final_activation": false,
+    "gene_to_dense": false,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "optimizer": "adam",
+    "loss_fn": "mse",
+    "epochs": 50,
+    "save_model": 25,
+    "smiles_vocabulary_size": 575,
+    "drug_sensitivity_processing_parameters": {},
+    "gene_expression_processing_parameters": {},
+    "number_of_parameters": 48252129
+}
