@@ -3,7 +3,7 @@
 This is the git web for the paper "On the Role of Drug Molecular Fingerprints in Drug Response Prediction: A Comprehensive Investigation via Machine Learning Methods".
 
 ## To-Do Lists
-PaccMann code, data, and platform info.
+data
 
 ## Code Platform
 SRMF: MatLab R2023a, 64-bit;
@@ -14,7 +14,7 @@ HiDRA: Python 3.9.7;
 
 PathDSP: Python 3.9.7; 
 
-PaccMann:
+PaccMann: Python 3.9.7;
 
 ## Five Models
 
