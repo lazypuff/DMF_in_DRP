@@ -29,7 +29,7 @@ manifold.py: the code plugged in the main code.
 #### results
 IF_Ogdsc_xxxx_mask_yyyy.csv: the results of three metrics for every fold in different configurations. xxxx indicates the drug molecular fingerprints type and yyyy indicates the splitting strategy.
 
-predMat_IF_Ogdsc_xxxx_mask_yyyy.csv: the results of predicted Ln IC50 for each drug-cell pair. The column and row names are the same as "./data/resp_ogdsc.csv".
+predMat_IF_Ogdsc_xxxx_mask_yyyy.csv: the results of predicted Ln IC50 for each drug-cell pair. The column and row names are the same as "./data/resp_ogdsc.csv". Prediction value of 0 means the IC50 is missing when observed.
 
 Note that the there is no results that employing PubChem fingerprints as when ADRML using PubChem fingerprints, the algorithm cannot converge in 48 hours.
 
