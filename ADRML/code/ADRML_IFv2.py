@@ -23,10 +23,11 @@ import numpy as np
 import random
 from sklearn.metrics import mean_squared_error,r2_score#, ndcg_score
 import math
-from manifoldv2_mask_combination import manifold_learning
+from manifold import manifold_learning
 import os
 import pandas as pd
 
+os.chdir('/nas/longleaf/home/meisheng/FP_Project/code_running/ADRML/IF_code')
 
 def normalise_sim(similarity_matrix):
        """ This function aims to normalize the similarity matrix
@@ -119,6 +120,8 @@ def runapp(response_file, simC_name, simD_name, fold_infos, percent, miu, landa,
     rmse = []
     R2 = []
     pear = []
+    # initializing output prediction matrix
+    predMatOut = np.zeros_like(R)
     
     # repeting the cross valiation
     for rep in range(repetition):
@@ -167,6 +170,13 @@ def runapp(response_file, simC_name, simD_name, fold_infos, percent, miu, landa,
             predict_matrix2, A2,B2 = manifold_learning(train_IC.T, B1, A1, K, simC, simD, landa, miu)
             predict_matrix = 0.5 * (predict_matrix1 + predict_matrix2.T)
             
+            filtered_matrix = np.zeros_like(predict_matrix)  # Ensure it's re-initialized for each fold
+            for position in testPosition:
+                i, j = position
+                filtered_matrix[i, j] = predict_matrix[i, j]
+
+            predMatOut += filtered_matrix
+            
             # evaluate the model #CHECK
             results = modelEvaluation(R, predict_matrix, testPosition)
             mse.append(results[0])
@@ -178,6 +188,10 @@ def runapp(response_file, simC_name, simD_name, fold_infos, percent, miu, landa,
     dict = {'mse': mse, 'rmse': rmse, 'R2': R2, 'PCC': pear}
     df = pd.DataFrame(dict)
     df.to_csv(output_name)
+    
+    predMatOut_df = pd.DataFrame(predMatOut)
+    filename = f"predMat_{output_name}"
+    predMatOut_df.to_csv(filename, index=False)
 
 def main():
     # get the options from user

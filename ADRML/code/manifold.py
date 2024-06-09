@@ -3,15 +3,10 @@
 Created on Fri Apr 17 05:09:27 2020
 
 @author: fahma
-
-editted by Meisheng Xiao Sep 1 2023, added the validation set
-Mask Combination
 """
 import numpy
 import numpy as np
 from numpy.linalg import inv
-import random
-import copy
 
 def manifold_learning(Train_IC, P, Q, K, SimD, SimC, landa, miu):
     
@@ -23,30 +18,9 @@ def manifold_learning(Train_IC, P, Q, K, SimD, SimC, landa, miu):
         landa controls the similarity conservation while manifold learning
         miu is the regularization coeeficient for latent matrices        
     """
-    # pick out the validation position
-    seed = 66
-    pos_number = 0
-    all_position = []
-    for i in range(0, len(Train_IC)):
-        for j in range(0, len(Train_IC[0])):
-            pos_number = pos_number + 1
-            all_position.append([i, j])
-
-    all_position = np.array(all_position)
-    random.seed(seed)
-
-    index_col = np.arange(0, Train_IC.shape[1])
-    random.shuffle(index_col)
-    validnum_col = Train_IC.shape[1] // 10
-    valid_index_col = index_col[0:validnum_col]
-    validPosition = all_position[np.isin(all_position[:, 1], valid_index_col)]
-
-
-    for i in range(0, len(validPosition)):
-        Train_IC[validPosition[i, 0], validPosition[i, 1]] = 0
-
-    old_pred = P.dot(Q.T)
+    
     converge = False
+    old_pred = P.dot(Q.T)
     while not converge:
         
         # update P
@@ -59,14 +33,14 @@ def manifold_learning(Train_IC, P, Q, K, SimD, SimC, landa, miu):
         
         # computing the difference in predicted matrix of two subsequnt iterations 
          new_pred = P.dot(Q.T)
-
-         test_IC = old_pred[validPosition[:, 0], validPosition[:, 1]] - new_pred[validPosition[:, 0], validPosition[:, 1]]
-         difference = np.linalg.norm(test_IC)
-
+         difference = 0
+         for i in range(len(Train_IC)):
+             difference = difference + np.linalg.norm(old_pred[i] - new_pred[i])
          old_pred = new_pred
+         
          # if the diffiernce in predicted matrix of two subsequnt iterations is 
-         # less than 0.001, the method is converged
-         if difference < 0.001:
+         # less than 0.01, the method is converged
+         if difference < 0.01:
              converge = True
              
     return new_pred, P, Q

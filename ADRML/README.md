@@ -24,10 +24,12 @@ simD_(o)gdsc_xxxx.csv: the similarity matrices from different types of drug mole
 #### code
 ADRML_IFv2_xx.py: the main code used to train and predict, the output is the results of three metrics of each fold. xx indicates the splitting strategy, and left blank means mask pair/combination.
 
-manifoldv2_mask_xxxx.py: the code plugged in the main code, where xxxx indicates the splitting strategy.
+manifold.py: the code plugged in the main code.
 
 #### results
 IF_Ogdsc_xxxx_mask_yyyy.csv: the results of three metrics for every fold in different configurations. xxxx indicates the drug molecular fingerprints type and yyyy indicates the splitting strategy.
+
+predMat_IF_Ogdsc_xxxx_mask_yyyy.csv: the results of predicted Ln IC50 for each drug-cell pair. The column and row names are the same as "./data/resp_ogdsc.csv".
 
 Note that the there is no results that employing PubChem fingerprints as when ADRML using PubChem fingerprints, the algorithm cannot converge in 48 hours.
 
