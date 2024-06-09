@@ -9,7 +9,7 @@ Python 3.7.14
 ## Details about each file and folder
 Please download everything below before running code. Thank you!
 
-### All things are contained in GitHub
+### All necessary things to run codes are contained in GitHub
 #### data
 contain all the data used in ADRML in this study.
 
@@ -28,6 +28,8 @@ manifoldv2_mask_xxxx.py: the code plugged in the main code, where xxxx indicates
 
 #### results
 IF_Ogdsc_xxxx_mask_yyyy.csv: the results of three metrics for every fold in different configurations. xxxx indicates the drug molecular fingerprints type and yyyy indicates the splitting strategy.
+
+Note that the there is no results that employing PubChem fingerprints as when ADRML using PubChem fingerprints, the algorithm cannot converge in 48 hours.
 
 ## Example
 This example is to train the ADRML using 256-bit Morgan fingerprints under mask cell splitting.
