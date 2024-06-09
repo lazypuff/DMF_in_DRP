@@ -19,15 +19,21 @@ This folder contain all the code needed to run PathDSP in this study. The main c
 #### data
 fold_info_mask_xxxx.csv: the fold information for different splitting strategies, where xxxx indicates the splitting strategy.
 #### results
-15 folders under this folder, which are named as xxxx_mask_yyyy, where xxxx indicates the drug molecular fingerprints type and yyyy indicates the splitting strategy.
+12 folders under this folder, which are named as xxxx_mask_yyyy, where xxxx indicates the drug molecular fingerprints type and yyyy indicates the splitting strategy.
 
-Under each sub-folder, three files are here. 
+Under each sub-folder, Four files are here. They are prediction results under different experimental settings. each file records the prediction and true value of IC50 for each drug-cell pair across every fold.
 
-OutputName.Loss.txt: the file that records the training history;
+OutputName_b.Prediction.txt: The prediction results for the "With-Drug" setting for PathDSP.
 
-OutputName.Prediction.txt: the file that records the prediction and true value of each drug-cell pair for every fold;
+OutputName_nds1.Prediction.txt: The prediction results for the "Null-Drug" setting 1 for PathDSP.
 
-OutputName.best_model.pt: best model after training in PyTorch format.
+OutputName_nds2.Prediction.txt: The prediction results for the "Null-Drug" setting 2 for PathDSP.
+
+OutputName_nds3.Prediction.txt: The prediction results for the "Null-Drug" setting 3 for PathDSP.
+
+These "Null-Drug" settings differ with each other due to different shuffling of the drug molecular fingerprints. Three replicates are designated to measure the variability of the "Null-Drug" setting.
+
+
 ## Example
 Running the main code will give back the training history, predictions for each pair and best model in PyTorch format.
 
