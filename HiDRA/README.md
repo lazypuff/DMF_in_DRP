@@ -8,7 +8,9 @@ Python 3.9.7
 
 ## Details about each file and folder
 
-Please download everything below before running code. Thank you. \### Additional Data expression.csv, GDSC_response.csv and geneset.gmt are in the additional folder that stores data, which can be downloaded from:
+Please download everything below before running code. Thank you. 
+
+### Additional Data expression.csv, GDSC_response.csv and geneset.gmt are in the additional folder that stores data, which can be downloaded from:
 
 expression.csv: The original gene expression provided by GDSC.
 
