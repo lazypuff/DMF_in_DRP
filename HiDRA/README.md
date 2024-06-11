@@ -8,13 +8,13 @@ Python 3.9.7
 
 ## Details about each file and folder
 
-Please download everything below before running code. Thank you. 
+Please get the all the data below before running code. Thank you. 
 
 ### Additional Data 
 
-expression.csv, which can be downloaded from:
+expression.csv, which can be obtained from running the codes under the folder "preprocess".
 
-expression.csv: The original gene expression provided by GDSC.
+expression.csv: The gene expression for all the chosen cell lines used in this study, the original expression data was provided by GDSC.
 
 ### Contained in GitHub
 
