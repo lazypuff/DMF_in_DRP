@@ -9,10 +9,13 @@ Python 3.9.7
 ## Details about each file and folder
 Please download everything below before running code. Thank you!
 ### Additional Data
-The data needed for training and predicting PathDSP in this study can be downloaded from:
+Due to limit file size requested by GitHub, some input date needs to be preprocessed to retrieve. Please see the "preprocess" folder for details.
 
-In this link, there are five .txt files named as: "pdsp_gdsc_common_xxxx.txt" or "ogdsc_xxxx.txt", where xxxx indicates the configuration (xxxx is left blank for 256-bit Morgan fingerprints).
+After preprocessing, there are 12 .txt files named as: "xxxx_wd.txt", "xxxx_nds1.txt", "xxxx_nds2.txt" or "xxxx_nds3.txt", where xxxx indicates the configuration (256b for 256-bit Morgan fingerprints; 512b for 512-bit Morgan fingerprints; 1024b for 1024-bit Morgan fingerprints; pbfp for PubChem fingerprints).
 ### Contained in GitHub
+#### preprocess
+This folder contains all codes that preprocess data and the output dataset needs to be used with the files under the "data" folder
+
 #### code
 This folder contain all the code needed to run PathDSP in this study. The main code is: FNNv2.py.
 
@@ -37,11 +40,11 @@ These "Null-Drug" settings differ with each other due to different shuffling of 
 ## Example
 Running the main code will give back the training history, predictions for each pair and best model in PyTorch format.
 
-This example is to get the results(training history, predictions and best model) for 1024-bit Morgan fingerprints under mask drug splitting strategy.
+This example is to get the results(training history, predictions and best model) for third type of shuffled 256-bit Morgan fingerprints under mask drug splitting strategy.
 
-python ./code/FNNv2.py -i ./data/ogdsc_1024b.txt -c 10 -o ./results/1024b_mask_drug/output_oGDSC_IF_1024b_mask_drug -f ./data/fold_info_mask_drug.csv
+python ./PathDSP/code/FNNv2.py -i 256b_s3.txt -c 10 -o ./PathDSP/output_oGDSC_IF_256bnds3_mask_drug -f fold_info_mask_drug.csv
 
--i: the input data, should be downloaded from the section "Additional Data"; -c: number of CV, please use 10 for the purpose of replicating our study; -o: the desired output name; -f: the fold information used in training.
+-i: the input data, should be retrived from the section "preprocess"; -c: number of CV, please use 10 for the purpose of replicating our study; -o: the desired output name; -f: the fold information used in training.
 
 
 
