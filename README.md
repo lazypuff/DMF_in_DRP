@@ -1,6 +1,7 @@
 # DMF_in_DRP
 
-This is the git web for the paper "On the Role of Drug Molecular Fingerprints in Drug Response Prediction: A Comprehensive Investigation via Machine Learning Methods".
+This is the git web for the paper "Drug Molecular Representations for Drug Response Predictions: A
+Comprehensive Investigation via Machine Learning Methods".
 
 ## To-Do Lists
 data
