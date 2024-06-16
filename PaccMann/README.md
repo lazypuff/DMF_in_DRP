@@ -13,6 +13,7 @@ The Python code for training, predicting, and summary results can be found in th
 The code folder contains the source code of PaccMann, minor changes was made to run the model on GDSC dataset. 
 
 ### Additional Data
+The training data are obtained from the GDSC Database at https://www.cancerrxgene.org/. Processing codes are included.
 
 ### contained in GitHub
 
