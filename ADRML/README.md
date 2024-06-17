@@ -33,6 +33,10 @@ predMat_IF_Ogdsc_xxxx_mask_yyyy.csv: the results of predicted Ln IC50 for each d
 
 Note that the there is no results that employing PubChem fingerprints as when ADRML using PubChem fingerprints, the algorithm cannot converge in 48 hours.
 
+#### analysis
+
+ADRML_results_analysis.py: the python code to calculate the statistics shown in the paper. Please use it interactively.
+
 ## Example
 This example is to train the ADRML using 256-bit Morgan fingerprints under mask cell splitting.
 

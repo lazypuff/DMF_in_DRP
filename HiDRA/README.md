@@ -18,6 +18,10 @@ expression.csv: The gene expression for all the chosen cell lines used in this s
 
 ### Contained in GitHub
 
+#### preprocess
+
+The code used to retrieve the Additional Data mentioned above. Furtuer details are told under this folder.
+
 #### code
 
 HiDRA_predict.py: The code of prediction for HiDRA's output model.
@@ -32,7 +36,7 @@ geneset.gmt:The KEGG pathway data used in HiDRA.
 
 input_dir_oGDSC_xxxx: Folders that contain required gene data for cell lines and fingerprints for drugs in each configuration.
 
-training_mask_xxxx: Folders that contain training data and validation data for each splitting strategy.
+training_mask_xxxx: Folders that contain training data and validation data for each splitting strategy. Also contains the original IC50 data for the test data.
 
 pred_mask_xxxx: Folders that contain test data for each splitting strategy.
 
@@ -43,6 +47,12 @@ pred_results: results of predictions on the test data. (In this folder, the nami
 pred_results_nd2: results of predictions on the test data, for the second different random shuffling "Null-Drug" setting. Naming system is the same as above.
 
 pred_results_nd3: results of predictions on the test data, for the third different random shuffling "Null-Drug" setting. Naming system is the same as above.
+
+#### analysis
+
+compact_results: contained the results for one experiment that combines results across all CV fold. The compact results can be retrieved by running the below code: "HiDRA_results_analysis.py".
+
+HiDRA_results_analysis.py: the python code to calculate the statistics shown in the paper. Please use it interactively.
 
 ## Example
 

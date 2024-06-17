@@ -4,7 +4,7 @@ This is the git web for the paper "Drug Molecular Representations for Drug Respo
 Comprehensive Investigation via Machine Learning Methods".
 
 ## To-Do Lists
-data
+PaccMann: preprocessing code and how to get the data;
 
 ## Code Platform
 SRMF: MatLab R2023a, 64-bit;

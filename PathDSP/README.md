@@ -13,6 +13,7 @@ Due to limit file size requested by GitHub, some input date needs to be preproce
 
 After preprocessing, there are 12 .txt files named as: "xxxx_wd.txt", "xxxx_nds1.txt", "xxxx_nds2.txt" or "xxxx_nds3.txt", where xxxx indicates the configuration (256b for 256-bit Morgan fingerprints; 512b for 512-bit Morgan fingerprints; 1024b for 1024-bit Morgan fingerprints; pbfp for PubChem fingerprints).
 ### Contained in GitHub
+
 #### preprocess
 This folder contains all codes that preprocess data and the output dataset needs to be used with the files under the "data" folder
 
@@ -35,6 +36,10 @@ OutputName_nds2.Prediction.txt: The prediction results for the "Null-Drug" setti
 OutputName_nds3.Prediction.txt: The prediction results for the "Null-Drug" setting 3 for PathDSP.
 
 These "Null-Drug" settings differ with each other due to different shuffling of the drug molecular fingerprints. Three replicates are designated to measure the variability of the "Null-Drug" setting.
+
+#### analysis
+
+PathDSP_result_analysis.py: the python code to calculate the statistics shown in the paper. Please use it interactively.
 
 
 ## Example

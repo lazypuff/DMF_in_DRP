@@ -13,7 +13,8 @@ The Python code for training, predicting, and summary results can be found in th
 The code folder contains the source code of PaccMann, minor changes was made to run the model on GDSC dataset. 
 
 ### Additional Data
-The training data are obtained from the GDSC Database at https://www.cancerrxgene.org/. Processing codes are included.
+
+The training data are obtained from the GDSC Database at https://www.cancerrxgene.org/. Processing codes are included. Training and testing data in 3 settings, mask cell, mask drug and mask combination. Smiles and gene expression data.
 
 ### contained in GitHub
 
@@ -25,8 +26,20 @@ The result folder contains the prediction result of 10-fold cvs. As well as the 
 
 Please download everything below before running code.
 
-### Additional Data
-Training and testing data in 3 settings, mask cell, mask drug and mask combination. Smiles and gene expression data.
+#### code
 
+#### commands
+
+#### paccmann_results
+
+Three folders under this folder, which are "random", "random1" and "random2". The results of "With-Drug" experimental settings are under the folder "random1". Results of three differently shuffled "Null-Drug" settings are under each folder.
+
+#### analysis
+
+compact_results: contained the results for one experiment that combines results across all CV fold. The compact results can be retrieved by running the below code: "make_compact_results_PaccMann.R".
+
+make_compact_results_PaccMann.R: to retrieve the compact results.
+
+PaccMann_getstatistics.py: the python code to calculate the statistics shown in the paper. Please use it interactively.
 
 
