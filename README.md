@@ -1,6 +1,6 @@
 # DMF_in_DRP
 
-This is the git web for the paper "Drug Molecular Representations for Drug Response Predictions: A
+This is the GitHub web for the paper "Drug Molecular Representations for Drug Response Predictions: A
 Comprehensive Investigation via Machine Learning Methods".
 
 ## To-Do Lists
@@ -35,10 +35,16 @@ Source code: <https://github.com/TangYiChing/PathDSP>.
 
 The source code for HiDRA can be downloaded from <https://pubs.acs.org/doi/10.1021/acs.jcim.1c00706?goto=supporting-info>, in the supporting information section.
 
-
 ### PaccMann
 
 Source code: <https://github.com/PaccMann/paccmann_predictor>.
+
+## Folders
+
+All preprocessing, source and analysis codes and data are available for each model under their folder named after them.
+
+"Plots" is the folder for the code of plots shown in our paper.
+
 
 ## Common Abbreviation for this Project
 256b, 512b, 1024b: refers to 256-bit, 512-bit and 1024-bit Morgan Fingerprints respectively.
