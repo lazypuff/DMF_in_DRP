@@ -3,8 +3,6 @@
 This is the GitHub web for the paper "Drug Molecular Representations for Drug Response Predictions: A
 Comprehensive Investigation via Machine Learning Methods".
 
-## To-Do Lists
-PaccMann: preprocessing code and how to get the data;
 
 ## Code Platform
 SRMF: MatLab R2023a, 64-bit;
@@ -41,7 +39,7 @@ Source code: <https://github.com/PaccMann/paccmann_predictor>.
 
 ## Folders
 
-All preprocessing, source and analysis codes and data are available for each model under their folder named after them.
+All preprocessing, training / predicting and analysis codes and data are available for each model under their folder named after them.
 
 "Plots" is the folder for the code of plots shown in our paper.
 
