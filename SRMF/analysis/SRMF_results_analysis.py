@@ -11,18 +11,21 @@ og_512b_mask_comb = pd.read_csv('./SRMF/results/results_oldgdsc_512b_mask_comb.c
 og_1024b_mask_comb = pd.read_csv('./SRMF/results/results_oldgdsc_1024b_mask_comb.csv',header=None)
 og_pbfp_mask_comb = pd.read_csv('./SRMF/results/results_oldgdsc_pbfp_mask_comb.csv',header=None)
 og_nd_mask_comb = pd.read_csv('./SRMF/results/results_oldgdsc_nd_mask_comb.csv',header=None)
+og_2048b_mask_comb = pd.read_csv('./SRMF/results/results_oldgdsc_2048b_mask_comb.csv',header=None)
 # mask cell
 og_256b_mask_cell = pd.read_csv('./SRMF/results/results_oldgdsc_256b_mask_cell.csv',header=None)
 og_512b_mask_cell = pd.read_csv('./SRMF/results/results_oldgdsc_512b_mask_cell.csv',header=None)
 og_1024b_mask_cell = pd.read_csv('./SRMF/results/results_oldgdsc_1024b_mask_cell.csv',header=None)
 og_pbfp_mask_cell = pd.read_csv('./SRMF/results/results_oldgdsc_pbfp_mask_cell.csv',header=None)
 og_nd_mask_cell = pd.read_csv('./SRMF/results/results_oldgdsc_nd_mask_cell.csv',header=None)
+og_2048b_mask_cell = pd.read_csv('./SRMF/results/results_oldgdsc_2048b_mask_cell.csv',header=None)
 # mask drug
 og_256b_mask_drug = pd.read_csv('./SRMF/results/results_oldgdsc_256b_mask_drug.csv',header=None)
 og_512b_mask_drug = pd.read_csv('./SRMF/results/results_oldgdsc_512b_mask_drug.csv',header=None)
 og_1024b_mask_drug = pd.read_csv('./SRMF/results/results_oldgdsc_1024b_mask_drug.csv',header=None)
 og_pbfp_mask_drug = pd.read_csv('./SRMF/results/results_oldgdsc_pbfp_mask_drug.csv',header=None)
 og_nd_mask_drug = pd.read_csv('./SRMF/results/results_oldgdsc_nd_mask_drug.csv',header=None)
+og_2048b_mask_drug = pd.read_csv('./SRMF/results/results_oldgdsc_2048b_mask_drug.csv',header=None)
 
 
 
@@ -80,18 +83,21 @@ getstatistics(og_512b_mask_comb)
 getstatistics(og_1024b_mask_comb)
 getstatistics(og_pbfp_mask_comb)
 getstatistics(og_nd_mask_comb)
+getstatistics(og_2048b_mask_comb)
 # mask cell
 getstatistics(og_256b_mask_cell)
 getstatistics(og_512b_mask_cell)
 getstatistics(og_1024b_mask_cell)
 getstatistics(og_pbfp_mask_cell)
 getstatistics(og_nd_mask_cell)
+getstatistics(og_2048b_mask_cell)
 # mask drug
 getstatistics(og_256b_mask_drug)
 getstatistics(og_512b_mask_drug)
 getstatistics(og_1024b_mask_drug)
 getstatistics(og_pbfp_mask_drug)
 getstatistics(og_nd_mask_drug)
+getstatistics(og_2048b_mask_drug)
 
 
 
@@ -100,16 +106,19 @@ get_pairedWilcoxStat(og_256b_mask_comb,og_nd_mask_comb)
 get_pairedWilcoxStat(og_512b_mask_comb,og_nd_mask_comb)
 get_pairedWilcoxStat(og_1024b_mask_comb,og_nd_mask_comb)
 get_pairedWilcoxStat(og_pbfp_mask_comb,og_nd_mask_comb)
+get_pairedWilcoxStat(og_2048b_mask_comb,og_nd_mask_comb)
 
 
 get_pairedWilcoxStat(og_256b_mask_cell,og_nd_mask_cell)
 get_pairedWilcoxStat(og_512b_mask_cell,og_nd_mask_cell)
 get_pairedWilcoxStat(og_1024b_mask_cell,og_nd_mask_cell)
 get_pairedWilcoxStat(og_pbfp_mask_cell,og_nd_mask_cell)
+get_pairedWilcoxStat(og_2048b_mask_cell,og_nd_mask_cell)
 
 
 get_pairedWilcoxStat(og_256b_mask_drug,og_nd_mask_drug)
 get_pairedWilcoxStat(og_512b_mask_drug,og_nd_mask_drug)
 get_pairedWilcoxStat(og_1024b_mask_drug,og_nd_mask_drug)
 get_pairedWilcoxStat(og_pbfp_mask_drug,og_nd_mask_drug)
+get_pairedWilcoxStat(og_2048b_mask_drug,og_nd_mask_drug)
 
