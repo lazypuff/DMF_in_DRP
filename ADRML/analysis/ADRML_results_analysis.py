@@ -17,6 +17,10 @@ og_1024b_mask_comb = pd.read_csv('./ADRML/results/IF_Ogdsc_1024b_mask_comb.csv')
 og_1024b_mask_cell = pd.read_csv('./ADRML/results/IF_Ogdsc_1024b_mask_cell.csv')
 og_1024b_mask_drug = pd.read_csv('./ADRML/results/IF_Ogdsc_1024b_mask_drug.csv')
 
+og_2048b_mask_comb = pd.read_csv('./ADRML/results/IF_Ogdsc_2048b_mask_comb.csv')
+og_2048b_mask_cell = pd.read_csv('./ADRML/results/IF_Ogdsc_2048b_mask_cell.csv')
+og_2048b_mask_drug = pd.read_csv('./ADRML/results/IF_Ogdsc_2048b_mask_drug.csv')
+
 og_nd_mask_comb = pd.read_csv('./ADRML/results/IF_Ogdsc_nd_mask_comb.csv')
 og_nd_mask_cell = pd.read_csv('./ADRML/results/IF_Ogdsc_nd_mask_cell.csv')
 og_nd_mask_drug = pd.read_csv('./ADRML/results/IF_Ogdsc_nd_mask_drug.csv')
@@ -85,16 +89,25 @@ getstatistics(og_nd_mask_comb)
 getstatistics(og_nd_mask_cell)
 getstatistics(og_nd_mask_drug)
 
+getstatistics(og_2048b_mask_comb)
+getstatistics(og_2048b_mask_cell)
+getstatistics(og_2048b_mask_drug)
+
 get_pairedWilcoxStat(og_256b_mask_comb,og_nd_mask_comb)
 get_pairedWilcoxStat(og_512b_mask_comb,og_nd_mask_comb)
 get_pairedWilcoxStat(og_1024b_mask_comb,og_nd_mask_comb)
+get_pairedWilcoxStat(og_2048b_mask_comb,og_nd_mask_comb)
 
 get_pairedWilcoxStat(og_256b_mask_cell,og_nd_mask_cell)
 get_pairedWilcoxStat(og_512b_mask_cell,og_nd_mask_cell)
 get_pairedWilcoxStat(og_1024b_mask_cell,og_nd_mask_cell)
+get_pairedWilcoxStat(og_2048b_mask_cell,og_nd_mask_cell)
+
 get_pairedWilcoxStat(og_512b_mask_cell,og_1024b_mask_cell)
 
 get_pairedWilcoxStat(og_256b_mask_drug,og_nd_mask_drug)
 get_pairedWilcoxStat(og_512b_mask_drug,og_nd_mask_drug)
 get_pairedWilcoxStat(og_1024b_mask_drug,og_nd_mask_drug)
+get_pairedWilcoxStat(og_2048b_mask_drug,og_nd_mask_drug)
+
 get_pairedWilcoxStat(og_256b_mask_drug,og_512b_mask_drug)
