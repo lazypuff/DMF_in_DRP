@@ -6,6 +6,15 @@ The source code for HiDRA can be downloaded from <https://pubs.acs.org/doi/10.10
 
 Python 3.9.7
 
+## Environment
+
+tensorflow 2.12.0
+
+keras 2.12.0
+
+pandas, matplotlib, seaborn
+
+
 ## Details about each file and folder
 
 Please get the all the data below before running code. Thank you. 
