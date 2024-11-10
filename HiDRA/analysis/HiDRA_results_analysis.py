@@ -298,6 +298,43 @@ ogdsc_pbfpnd3_mask_drug = getdf("./HiDRA/pred_results_nd3",
               "./HiDRA/training_mask_drug",
               'OGDSC','pbfpnd','md')
 
+ogdsc_2048b_mask_comb = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_comb",
+              'OGDSC','2048b','')
+ogdsc_2048b_mask_cell = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_cell",
+              'OGDSC','2048b','mc')
+ogdsc_2048b_mask_drug = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_drug",
+              'OGDSC','2048b','md')
+ogdsc_2048bnd_mask_comb = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_comb",
+              'OGDSC','2048bnd','')
+ogdsc_2048bnd_mask_cell = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_cell",
+              'OGDSC','2048bnd','mc')
+ogdsc_2048bnd_mask_drug = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_drug",
+              'OGDSC','2048bnd','md')
+ogdsc_2048bnd2_mask_comb = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_comb",
+              'OGDSC','2048bnd2','')
+ogdsc_2048bnd2_mask_cell = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_cell",
+              'OGDSC','2048bnd2','mc')
+ogdsc_2048bnd2_mask_drug = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_drug",
+              'OGDSC','2048bnd2','md')
+ogdsc_2048bnd3_mask_comb = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_comb",
+              'OGDSC','2048bnd3','')
+ogdsc_2048bnd3_mask_cell = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_cell",
+              'OGDSC','2048bnd3','mc')
+ogdsc_2048bnd3_mask_drug = getdf("./HiDRA/pred_results_2048b",
+              "./HiDRA/training_mask_drug",
+              'OGDSC','2048bnd3','md')
+
 
 ### get performance
 metrics_ogdsc_256b_mask_comb = getperform(ogdsc_256b_mask_comb)
@@ -352,6 +389,19 @@ metrics_ogdsc_pbfpnd3_mask_comb = getperform(ogdsc_pbfpnd3_mask_comb)
 metrics_ogdsc_pbfpnd3_mask_cell = getperform(ogdsc_pbfpnd3_mask_cell)
 metrics_ogdsc_pbfpnd3_mask_drug = getperform(ogdsc_pbfpnd3_mask_drug)
 
+metrics_ogdsc_2048b_mask_comb = getperform(ogdsc_2048b_mask_comb)
+metrics_ogdsc_2048b_mask_cell = getperform(ogdsc_2048b_mask_cell)
+metrics_ogdsc_2048b_mask_drug = getperform(ogdsc_2048b_mask_drug)
+metrics_ogdsc_2048bnd_mask_comb = getperform(ogdsc_2048bnd_mask_comb)
+metrics_ogdsc_2048bnd_mask_cell = getperform(ogdsc_2048bnd_mask_cell)
+metrics_ogdsc_2048bnd_mask_drug = getperform(ogdsc_2048bnd_mask_drug)
+metrics_ogdsc_2048bnd2_mask_comb = getperform(ogdsc_2048bnd2_mask_comb)
+metrics_ogdsc_2048bnd2_mask_cell = getperform(ogdsc_2048bnd2_mask_cell)
+metrics_ogdsc_2048bnd2_mask_drug = getperform(ogdsc_2048bnd2_mask_drug)
+metrics_ogdsc_2048bnd3_mask_comb = getperform(ogdsc_2048bnd3_mask_comb)
+metrics_ogdsc_2048bnd3_mask_cell = getperform(ogdsc_2048bnd3_mask_cell)
+metrics_ogdsc_2048bnd3_mask_drug = getperform(ogdsc_2048bnd3_mask_drug)
+
 getstatistics(metrics_ogdsc_256b_mask_comb)
 getstatistics(metrics_ogdsc_256b_mask_cell)
 getstatistics(metrics_ogdsc_256b_mask_drug)
@@ -400,6 +450,19 @@ getstatistics(metrics_ogdsc_pbfpnd2_mask_drug)
 getstatistics(metrics_ogdsc_pbfpnd3_mask_comb)
 getstatistics(metrics_ogdsc_pbfpnd3_mask_cell)
 getstatistics(metrics_ogdsc_pbfpnd3_mask_drug)
+
+getstatistics(metrics_ogdsc_2048b_mask_comb)
+getstatistics(metrics_ogdsc_2048b_mask_cell)
+getstatistics(metrics_ogdsc_2048b_mask_drug)
+getstatistics(metrics_ogdsc_2048bnd_mask_comb)
+getstatistics(metrics_ogdsc_2048bnd_mask_cell)
+getstatistics(metrics_ogdsc_2048bnd_mask_drug)
+getstatistics(metrics_ogdsc_2048bnd2_mask_comb)
+getstatistics(metrics_ogdsc_2048bnd2_mask_cell)
+getstatistics(metrics_ogdsc_2048bnd2_mask_drug)
+getstatistics(metrics_ogdsc_2048bnd3_mask_comb)
+getstatistics(metrics_ogdsc_2048bnd3_mask_cell)
+getstatistics(metrics_ogdsc_2048bnd3_mask_drug)
 
 ### get p-value from paired wilcoxon test
 get_pairedWilcoxStat(metrics_ogdsc_256b_mask_comb,metrics_ogdsc_256bnd_mask_comb)
@@ -453,6 +516,18 @@ get_pairedWilcoxStat(metrics_ogdsc_pbfp_mask_drug,metrics_ogdsc_pbfpnd3_mask_dru
 get_pairedWilcoxStat(metrics_ogdsc_pbfp_mask_comb,metrics_ogdsc_1024b_mask_comb)
 get_pairedWilcoxStat(metrics_ogdsc_pbfp_mask_cell,metrics_ogdsc_1024b_mask_cell) # 0.8457, 0.8457, 0.8457
 get_pairedWilcoxStat(metrics_ogdsc_pbfp_mask_drug,metrics_ogdsc_1024b_mask_drug)
+
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_comb,metrics_ogdsc_2048bnd_mask_comb)
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_cell,metrics_ogdsc_2048bnd_mask_cell)
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_drug,metrics_ogdsc_2048bnd_mask_drug)
+
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_comb,metrics_ogdsc_2048bnd2_mask_comb)
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_cell,metrics_ogdsc_2048bnd2_mask_cell)
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_drug,metrics_ogdsc_2048bnd2_mask_drug)
+
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_comb,metrics_ogdsc_2048bnd3_mask_comb)
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_cell,metrics_ogdsc_2048bnd3_mask_cell)
+get_pairedWilcoxStat(metrics_ogdsc_2048b_mask_drug,metrics_ogdsc_2048bnd3_mask_drug)
 
 ### output all these compact data frames for further plots.
 # pbfp
@@ -514,3 +589,19 @@ ogdsc_1024bnd3_mask_drug.to_csv("./HiDRA/analysis/compact_results/1024bnd3_md.cs
 ogdsc_1024b_mask_comb.to_csv("./HiDRA/analysis/compact_results/1024b_mp.csv")
 ogdsc_1024b_mask_cell.to_csv("./HiDRA/analysis/compact_results/1024b_mc.csv")
 ogdsc_1024b_mask_drug.to_csv("./HiDRA/analysis/compact_results/1024b_md.csv")
+
+# 2048b
+ogdsc_2048bnd_mask_comb.to_csv("./HiDRA/analysis/compact_results/2048bnd_mp.csv")
+ogdsc_2048bnd_mask_cell.to_csv("./HiDRA/analysis/compact_results/2048bnd_mc.csv")
+ogdsc_2048bnd_mask_drug.to_csv("./HiDRA/analysis/compact_results/2048bnd_md.csv")
+ogdsc_2048bnd2_mask_comb.to_csv("./HiDRA/analysis/compact_results/2048bnd2_mp.csv")
+ogdsc_2048bnd2_mask_cell.to_csv("./HiDRA/analysis/compact_results/2048bnd2_mc.csv")
+ogdsc_2048bnd2_mask_drug.to_csv("./HiDRA/analysis/compact_results/2048bnd2_md.csv")
+ogdsc_2048bnd3_mask_comb.to_csv("./HiDRA/analysis/compact_results/2048bnd3_mp.csv")
+ogdsc_2048bnd3_mask_cell.to_csv("./HiDRA/analysis/compact_results/2048bnd3_mc.csv")
+ogdsc_2048bnd3_mask_drug.to_csv("./HiDRA/analysis/compact_results/2048bnd3_md.csv")
+
+ogdsc_2048b_mask_comb.to_csv("./HiDRA/analysis/compact_results/2048b_mp.csv")
+ogdsc_2048b_mask_cell.to_csv("./HiDRA/analysis/compact_results/2048b_mc.csv")
+ogdsc_2048b_mask_drug.to_csv("./HiDRA/analysis/compact_results/2048b_md.csv")
+
