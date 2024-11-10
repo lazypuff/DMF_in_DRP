@@ -3,12 +3,12 @@ library(tidyverse)
 library(RColorBrewer)
 # Create plot df
 plot_df_mp <- data.frame(
-  Model = c("HiDRA", "HiDRA", "HiDRA", "PaccMann"),
+  Model = c("HiDRA", "HiDRA", "HiDRA", "HiDRA", "PaccMann"),
   DR = c("256-bit Morgan Fingerprints", "1024-bit Morgan Fingerprints", 
-         "PubChem Fingerprints", "SMILES"),
-  Split = c("MP", "MP", "MP","MP"),
-  RMSE = c(0.985, 0.982, 0.974, 1.137),
-  PCC = c(0.935, 0.934, 0.935, 0.913)
+         "2048-bit Morgan Fingerprints", "PubChem Fingerprints", "SMILES"),
+  Split = c("MP", "MP", "MP","MP","MP"),
+  RMSE = c(0.985, 0.982, 0.976, 0.974, 1.137),
+  PCC = c(0.935, 0.934, 0.935 ,0.935, 0.913)
 )
 
 plot_df_mp <- plot_df_mp %>%
