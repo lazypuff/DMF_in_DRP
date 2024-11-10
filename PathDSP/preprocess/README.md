@@ -22,6 +22,10 @@ Download the original data from PathDSP, which should be called as: "input.txt" 
 Run the "Preprocessing_pdsp.py" first, to get the "With-Drug" setting input such as 256b_wd.txt.
 
 ### Step 3
-Run the "PathDSP_shuffle.py" to get the shuffled fingerprints input dataset such as 256b_s1.txt.
+Run the "pdsp_shuffle_by_drugs.py" to get the shuffled fingerprints input dataset such as 256b_s1.txt.
+
+Note that there are two shuffle ways for experimental use. "pdsp_shuffle_by_drugs.py" is to randomly assign the fingerprints to drugs, while "PathDSP_shuffle.py" is to shuffle the fingerprints within each drug, which means creating a fingerprint that destroys the structure of fingerprints for each drug.
+
+The shuffle manner in "PathDSP_shuffle.py" is used to monitor if there are any performance improvement purely due to the artifact from deep learning.
 
 

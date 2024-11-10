@@ -114,6 +114,12 @@ og_mask_cell_pbfp = pd.read_csv("./PathDSP/results/pbfp_mask_cell/output_oGDSC_I
                              sep='\t')
 og_mask_drug_pbfp = pd.read_csv("./PathDSP/results/pbfp_mask_drug/output_oGDSC_IF_pbfp_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
+og_mask_comb_2048b = pd.read_csv("./PathDSP/results/2048b_mask_comb/output_oGDSC_IF_2048b_mask_comb.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_cell_2048b = pd.read_csv("./PathDSP/results/2048b_mask_cell/output_oGDSC_IF_2048b_mask_cell.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_drug_2048b = pd.read_csv("./PathDSP/results/2048b_mask_drug/output_oGDSC_IF_2048b_mask_drug.FNN.cv_10.Prediction.txt",
+                             sep='\t')
 
 og_metric_mask_comb_256b = getperform(og_mask_comb_256b)
 og_metric_mask_cell_256b = getperform(og_mask_cell_256b)
@@ -131,46 +137,59 @@ og_metric_mask_comb_pbfp = getperform(og_mask_comb_pbfp)
 og_metric_mask_cell_pbfp = getperform(og_mask_cell_pbfp)
 og_metric_mask_drug_pbfp = getperform(og_mask_drug_pbfp)
 
+og_metric_mask_comb_2048b = getperform(og_mask_comb_2048b)
+og_metric_mask_cell_2048b = getperform(og_mask_cell_2048b)
+og_metric_mask_drug_2048b = getperform(og_mask_drug_2048b)
+
 getstatistics(og_metric_mask_comb_256b)
 getstatistics(og_metric_mask_comb_512b)
 getstatistics(og_metric_mask_comb_1024b)
 getstatistics(og_metric_mask_comb_pbfp)
+getstatistics(og_metric_mask_comb_2048b)
 
 getstatistics(og_metric_mask_cell_256b)
 getstatistics(og_metric_mask_cell_512b)
 getstatistics(og_metric_mask_cell_1024b)
 getstatistics(og_metric_mask_cell_pbfp)
+getstatistics(og_metric_mask_cell_2048b)
 
 getstatistics(og_metric_mask_drug_256b)
 getstatistics(og_metric_mask_drug_512b)
 getstatistics(og_metric_mask_drug_1024b)
 getstatistics(og_metric_mask_drug_pbfp)
+getstatistics(og_metric_mask_drug_2048b)
 
 
 ### OLD GDSC2 PERMUTATION TYPE, GROUP 1
-og_mask_comb_256bnds1 = pd.read_csv("./PathDSP/results/256b_mask_comb/output_oGDSC_IF_256bnds1_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_256bnds1 = pd.read_csv("./PathDSP/results/256b_mask_comb/output_oGDSC_IF_256bnds1sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_256bnds1 = pd.read_csv("./PathDSP/results/256b_mask_cell/output_oGDSC_IF_256bnds1_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_256bnds1 = pd.read_csv("./PathDSP/results/256b_mask_cell/output_oGDSC_IF_256bnds1sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_256bnds1 = pd.read_csv("./PathDSP/results/256b_mask_drug/output_oGDSC_IF_256bnds1_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_256bnds1 = pd.read_csv("./PathDSP/results/256b_mask_drug/output_oGDSC_IF_256bnds1sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_512bnds1 = pd.read_csv("./PathDSP/results/512b_mask_comb/output_oGDSC_IF_512bnds1_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_512bnds1 = pd.read_csv("./PathDSP/results/512b_mask_comb/output_oGDSC_IF_512bnds1sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_512bnds1 = pd.read_csv("./PathDSP/results/512b_mask_cell/output_oGDSC_IF_512bnds1_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_512bnds1 = pd.read_csv("./PathDSP/results/512b_mask_cell/output_oGDSC_IF_512bnds1sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_512bnds1 = pd.read_csv("./PathDSP/results/512b_mask_drug/output_oGDSC_IF_512bnds1_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_512bnds1 = pd.read_csv("./PathDSP/results/512b_mask_drug/output_oGDSC_IF_512bnds1sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_1024bnds1 = pd.read_csv("./PathDSP/results/1024b_mask_comb/output_oGDSC_IF_1024bnds1_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_1024bnds1 = pd.read_csv("./PathDSP/results/1024b_mask_comb/output_oGDSC_IF_1024bnds1sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_1024bnds1 = pd.read_csv("./PathDSP/results/1024b_mask_cell/output_oGDSC_IF_1024bnds1_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_1024bnds1 = pd.read_csv("./PathDSP/results/1024b_mask_cell/output_oGDSC_IF_1024bnds1sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_1024bnds1 = pd.read_csv("./PathDSP/results/1024b_mask_drug/output_oGDSC_IF_1024bnds1_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_1024bnds1 = pd.read_csv("./PathDSP/results/1024b_mask_drug/output_oGDSC_IF_1024bnds1sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_pbfpnds1 = pd.read_csv("./PathDSP/results/pbfp_mask_comb/output_oGDSC_IF_pbfpnds1_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_pbfpnds1 = pd.read_csv("./PathDSP/results/pbfp_mask_comb/output_oGDSC_IF_pbfpnds1sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_pbfpnds1 = pd.read_csv("./PathDSP/results/pbfp_mask_cell/output_oGDSC_IF_pbfpnds1_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_pbfpnds1 = pd.read_csv("./PathDSP/results/pbfp_mask_cell/output_oGDSC_IF_pbfpnds1sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_pbfpnds1 = pd.read_csv("./PathDSP/results/pbfp_mask_drug/output_oGDSC_IF_pbfpnds1_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_pbfpnds1 = pd.read_csv("./PathDSP/results/pbfp_mask_drug/output_oGDSC_IF_pbfpnds1sd_mask_drug.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_comb_2048bnds1 = pd.read_csv("./PathDSP/results/2048b_mask_comb/output_oGDSC_IF_2048bnds1sd_mask_comb.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_cell_2048bnds1 = pd.read_csv("./PathDSP/results/2048b_mask_cell/output_oGDSC_IF_2048bnds1sd_mask_cell.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_drug_2048bnds1 = pd.read_csv("./PathDSP/results/2048b_mask_drug/output_oGDSC_IF_2048bnds1sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
 
 og_metric_mask_comb_256bnds1 = getperform(og_mask_comb_256bnds1)
@@ -185,6 +204,10 @@ og_metric_mask_comb_1024bnds1 = getperform(og_mask_comb_1024bnds1)
 og_metric_mask_cell_1024bnds1 = getperform(og_mask_cell_1024bnds1)
 og_metric_mask_drug_1024bnds1 = getperform(og_mask_drug_1024bnds1)
 
+og_metric_mask_comb_2048bnds1 = getperform(og_mask_comb_2048bnds1)
+og_metric_mask_cell_2048bnds1 = getperform(og_mask_cell_2048bnds1)
+og_metric_mask_drug_2048bnds1 = getperform(og_mask_drug_2048bnds1)
+
 og_metric_mask_comb_pbfpnds1 = getperform(og_mask_comb_pbfpnds1)
 og_metric_mask_cell_pbfpnds1 = getperform(og_mask_cell_pbfpnds1)
 og_metric_mask_drug_pbfpnds1 = getperform(og_mask_drug_pbfpnds1)
@@ -193,41 +216,50 @@ getstatistics(og_metric_mask_comb_256bnds1)
 getstatistics(og_metric_mask_comb_512bnds1)
 getstatistics(og_metric_mask_comb_1024bnds1)
 getstatistics(og_metric_mask_comb_pbfpnds1)
+getstatistics(og_metric_mask_comb_2048bnds1)
 
 getstatistics(og_metric_mask_cell_256bnds1)
 getstatistics(og_metric_mask_cell_512bnds1)
 getstatistics(og_metric_mask_cell_1024bnds1)
 getstatistics(og_metric_mask_cell_pbfpnds1)
+getstatistics(og_metric_mask_cell_2048bnds1)
 
 getstatistics(og_metric_mask_drug_256bnds1)
 getstatistics(og_metric_mask_drug_512bnds1)
 getstatistics(og_metric_mask_drug_1024bnds1)
 getstatistics(og_metric_mask_drug_pbfpnds1)
+getstatistics(og_metric_mask_drug_2048bnds1)
 
 ### OLD GDSC2 PERMUTATION TYPE, GROUP 2
-og_mask_comb_256bnds2 = pd.read_csv("./PathDSP/results/256b_mask_comb/output_oGDSC_IF_256bnds2_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_256bnds2 = pd.read_csv("./PathDSP/results/256b_mask_comb/output_oGDSC_IF_256bnds2sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_256bnds2 = pd.read_csv("./PathDSP/results/256b_mask_cell/ogdsc_Jun12/output_oGDSC_IF_256bnds2_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_256bnds2 = pd.read_csv("./PathDSP/results/256b_mask_cell/output_oGDSC_IF_256bnds2sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_256bnds2 = pd.read_csv("./PathDSP/results/256b_mask_drug/output_oGDSC_IF_256bnds2_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_256bnds2 = pd.read_csv("./PathDSP/results/256b_mask_drug/output_oGDSC_IF_256bnds2sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_512bnds2 = pd.read_csv("./PathDSP/results/512b_mask_comb/output_oGDSC_IF_512bnds2_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_512bnds2 = pd.read_csv("./PathDSP/results/512b_mask_comb/output_oGDSC_IF_512bnds2sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_512bnds2 = pd.read_csv("./PathDSP/results/512b_mask_cell/output_oGDSC_IF_512bnds2_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_512bnds2 = pd.read_csv("./PathDSP/results/512b_mask_cell/output_oGDSC_IF_512bnds2sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_512bnds2 = pd.read_csv("./PathDSP/results/512b_mask_drug/output_oGDSC_IF_512bnds2_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_512bnds2 = pd.read_csv("./PathDSP/results/512b_mask_drug/output_oGDSC_IF_512bnds2sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_1024bnds2 = pd.read_csv("./PathDSP/results/1024b_mask_comb/output_oGDSC_IF_1024bnds2_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_1024bnds2 = pd.read_csv("./PathDSP/results/1024b_mask_comb/output_oGDSC_IF_1024bnds2sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_1024bnds2 = pd.read_csv("./PathDSP/results/1024b_mask_cell/output_oGDSC_IF_1024bnds2_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_1024bnds2 = pd.read_csv("./PathDSP/results/1024b_mask_cell/output_oGDSC_IF_1024bnds2sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_1024bnds2 = pd.read_csv("./PathDSP/results/1024b_mask_drug/output_oGDSC_IF_1024bnds2_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_1024bnds2 = pd.read_csv("./PathDSP/results/1024b_mask_drug/output_oGDSC_IF_1024bnds2sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_pbfpnds2 = pd.read_csv("./PathDSP/results/pbfp_mask_comb/output_oGDSC_IF_pbfpnds2_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_2048bnds2 = pd.read_csv("./PathDSP/results/2048b_mask_comb/output_oGDSC_IF_2048bnds2sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_pbfpnds2 = pd.read_csv("./PathDSP/results/pbfp_mask_cell/output_oGDSC_IF_pbfpnds2_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_2048bnds2 = pd.read_csv("./PathDSP/results/2048b_mask_cell/output_oGDSC_IF_2048bnds2sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_pbfpnds2 = pd.read_csv("./PathDSP/results/pbfp_mask_drug/output_oGDSC_IF_pbfpnds2_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_2048bnds2 = pd.read_csv("./PathDSP/results/2048b_mask_drug/output_oGDSC_IF_2048bnds2sd_mask_drug.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_comb_pbfpnds2 = pd.read_csv("./PathDSP/results/pbfp_mask_comb/output_oGDSC_IF_pbfpnds2sd_mask_comb.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_cell_pbfpnds2 = pd.read_csv("./PathDSP/results/pbfp_mask_cell/output_oGDSC_IF_pbfpnds2sd_mask_cell.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_drug_pbfpnds2 = pd.read_csv("./PathDSP/results/pbfp_mask_drug/output_oGDSC_IF_pbfpnds2sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
 
 og_metric_mask_comb_256bnds2 = getperform(og_mask_comb_256bnds2)
@@ -242,6 +274,10 @@ og_metric_mask_comb_1024bnds2 = getperform(og_mask_comb_1024bnds2)
 og_metric_mask_cell_1024bnds2 = getperform(og_mask_cell_1024bnds2)
 og_metric_mask_drug_1024bnds2 = getperform(og_mask_drug_1024bnds2)
 
+og_metric_mask_comb_2048bnds2 = getperform(og_mask_comb_2048bnds2)
+og_metric_mask_cell_2048bnds2 = getperform(og_mask_cell_2048bnds2)
+og_metric_mask_drug_2048bnds2 = getperform(og_mask_drug_2048bnds2)
+
 og_metric_mask_comb_pbfpnds2 = getperform(og_mask_comb_pbfpnds2)
 og_metric_mask_cell_pbfpnds2 = getperform(og_mask_cell_pbfpnds2)
 og_metric_mask_drug_pbfpnds2 = getperform(og_mask_drug_pbfpnds2)
@@ -251,41 +287,50 @@ getstatistics(og_metric_mask_comb_256bnds2)
 getstatistics(og_metric_mask_comb_512bnds2)
 getstatistics(og_metric_mask_comb_1024bnds2)
 getstatistics(og_metric_mask_comb_pbfpnds2)
+getstatistics(og_metric_mask_comb_2048bnds2)
 
 getstatistics(og_metric_mask_cell_256bnds2)
 getstatistics(og_metric_mask_cell_512bnds2)
 getstatistics(og_metric_mask_cell_1024bnds2)
 getstatistics(og_metric_mask_cell_pbfpnds2)
+getstatistics(og_metric_mask_cell_2048bnds2)
 
 getstatistics(og_metric_mask_drug_256bnds2)
 getstatistics(og_metric_mask_drug_512bnds2)
 getstatistics(og_metric_mask_drug_1024bnds2)
 getstatistics(og_metric_mask_drug_pbfpnds2)
+getstatistics(og_metric_mask_drug_2048bnds2)
 
 ### OLD GDSC2 PERMUTATION TYPE, GROUP 3
-og_mask_comb_256bnds3 = pd.read_csv("./PathDSP/results/256b_mask_comb/output_oGDSC_IF_256bnds3_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_256bnds3 = pd.read_csv("./PathDSP/results/256b_mask_comb/output_oGDSC_IF_256bnds3sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_256bnds3 = pd.read_csv("./PathDSP/results/256b_mask_cell/output_oGDSC_IF_256bnds3_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_256bnds3 = pd.read_csv("./PathDSP/results/256b_mask_cell/output_oGDSC_IF_256bnds3sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_256bnds3 = pd.read_csv("./PathDSP/results/256b_mask_drug/output_oGDSC_IF_256bnds3_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_256bnds3 = pd.read_csv("./PathDSP/results/256b_mask_drug/output_oGDSC_IF_256bnds3sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_512bnds3 = pd.read_csv("./PathDSP/results/512b_mask_comb/output_oGDSC_IF_512bnds3_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_512bnds3 = pd.read_csv("./PathDSP/results/512b_mask_comb/output_oGDSC_IF_512bnds3sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_512bnds3 = pd.read_csv("./PathDSP/results/512b_mask_cell/output_oGDSC_IF_512bnds3_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_512bnds3 = pd.read_csv("./PathDSP/results/512b_mask_cell/output_oGDSC_IF_512bnds3sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_512bnds3 = pd.read_csv("./PathDSP/results/512b_mask_drug/output_oGDSC_IF_512bnds3_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_512bnds3 = pd.read_csv("./PathDSP/results/512b_mask_drug/output_oGDSC_IF_512bnds3sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_1024bnds3 = pd.read_csv("./PathDSP/results/1024b_mask_comb/output_oGDSC_IF_1024bnds3_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_1024bnds3 = pd.read_csv("./PathDSP/results/1024b_mask_comb/output_oGDSC_IF_1024bnds3sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_1024bnds3 = pd.read_csv("./PathDSP/results/1024b_mask_cell/output_oGDSC_IF_1024bnds3_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_1024bnds3 = pd.read_csv("./PathDSP/results/1024b_mask_cell/output_oGDSC_IF_1024bnds3sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_1024bnds3 = pd.read_csv("./PathDSP/results/1024b_mask_drug/output_oGDSC_IF_1024bnds3_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_1024bnds3 = pd.read_csv("./PathDSP/results/1024b_mask_drug/output_oGDSC_IF_1024bnds3sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_comb_pbfpnds3 = pd.read_csv("./PathDSP/results/pbfp_mask_comb/output_oGDSC_IF_pbfpnds3_mask_comb.FNN.cv_10.Prediction.txt",
+og_mask_comb_2048bnds3 = pd.read_csv("./PathDSP/results/2048b_mask_comb/output_oGDSC_IF_2048bnds3sd_mask_comb.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_cell_pbfpnds3 = pd.read_csv("./PathDSP/results/pbfp_mask_cell/output_oGDSC_IF_pbfpnds3_mask_cell.FNN.cv_10.Prediction.txt",
+og_mask_cell_2048bnds3 = pd.read_csv("./PathDSP/results/2048b_mask_cell/output_oGDSC_IF_2048bnds3sd_mask_cell.FNN.cv_10.Prediction.txt",
                              sep='\t')
-og_mask_drug_pbfpnds3 = pd.read_csv("./PathDSP/results/pbfp_mask_drug/output_oGDSC_IF_pbfpnds3_mask_drug.FNN.cv_10.Prediction.txt",
+og_mask_drug_2048bnds3 = pd.read_csv("./PathDSP/results/2048b_mask_drug/output_oGDSC_IF_2048bnds3sd_mask_drug.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_comb_pbfpnds3 = pd.read_csv("./PathDSP/results/pbfp_mask_comb/output_oGDSC_IF_pbfpnds3sd_mask_comb.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_cell_pbfpnds3 = pd.read_csv("./PathDSP/results/pbfp_mask_cell/output_oGDSC_IF_pbfpnds3sd_mask_cell.FNN.cv_10.Prediction.txt",
+                             sep='\t')
+og_mask_drug_pbfpnds3 = pd.read_csv("./PathDSP/results/pbfp_mask_drug/output_oGDSC_IF_pbfpnds3sd_mask_drug.FNN.cv_10.Prediction.txt",
                              sep='\t')
 
 og_metric_mask_comb_256bnds3 = getperform(og_mask_comb_256bnds3)
@@ -300,6 +345,10 @@ og_metric_mask_comb_1024bnds3 = getperform(og_mask_comb_1024bnds3)
 og_metric_mask_cell_1024bnds3 = getperform(og_mask_cell_1024bnds3)
 og_metric_mask_drug_1024bnds3 = getperform(og_mask_drug_1024bnds3)
 
+og_metric_mask_comb_2048bnds3 = getperform(og_mask_comb_2048bnds3)
+og_metric_mask_cell_2048bnds3 = getperform(og_mask_cell_2048bnds3)
+og_metric_mask_drug_2048bnds3 = getperform(og_mask_drug_2048bnds3)
+
 og_metric_mask_comb_pbfpnds3 = getperform(og_mask_comb_pbfpnds3)
 og_metric_mask_cell_pbfpnds3 = getperform(og_mask_cell_pbfpnds3)
 og_metric_mask_drug_pbfpnds3 = getperform(og_mask_drug_pbfpnds3)
@@ -309,22 +358,26 @@ getstatistics(og_metric_mask_comb_256bnds3)
 getstatistics(og_metric_mask_comb_512bnds3)
 getstatistics(og_metric_mask_comb_1024bnds3)
 getstatistics(og_metric_mask_comb_pbfpnds3)
+getstatistics(og_metric_mask_comb_2048bnds3)
 
 getstatistics(og_metric_mask_cell_256bnds3)
 getstatistics(og_metric_mask_cell_512bnds3)
 getstatistics(og_metric_mask_cell_1024bnds3)
 getstatistics(og_metric_mask_cell_pbfpnds3)
+getstatistics(og_metric_mask_cell_2048bnds3)
 
 getstatistics(og_metric_mask_drug_256bnds3)
 getstatistics(og_metric_mask_drug_512bnds3)
 getstatistics(og_metric_mask_drug_1024bnds3)
 getstatistics(og_metric_mask_drug_pbfpnds3)
+getstatistics(og_metric_mask_drug_2048bnds3)
 
 ### Paired Wilcoxon test
 #### mask comb
 get_pairedWilcoxStat(og_metric_mask_comb_256b,og_metric_mask_comb_256bnds1)
 get_pairedWilcoxStat(og_metric_mask_comb_512b,og_metric_mask_comb_512bnds1)
 get_pairedWilcoxStat(og_metric_mask_comb_1024b,og_metric_mask_comb_1024bnds1)
+get_pairedWilcoxStat(og_metric_mask_comb_2048b,og_metric_mask_comb_2048bnds1)
 get_pairedWilcoxStat(og_metric_mask_comb_pbfp,og_metric_mask_comb_pbfpnds1)
 # check which is better
 # diff_mask_comb_pbfpnds1 = og_metric_mask_comb_pbfpnds1 - og_metric_mask_comb_pbfp
@@ -332,6 +385,7 @@ get_pairedWilcoxStat(og_metric_mask_comb_pbfp,og_metric_mask_comb_pbfpnds1)
 get_pairedWilcoxStat(og_metric_mask_comb_256b,og_metric_mask_comb_256bnds2)
 get_pairedWilcoxStat(og_metric_mask_comb_512b,og_metric_mask_comb_512bnds2)
 get_pairedWilcoxStat(og_metric_mask_comb_1024b,og_metric_mask_comb_1024bnds2)
+get_pairedWilcoxStat(og_metric_mask_comb_2048b,og_metric_mask_comb_2048bnds2)
 get_pairedWilcoxStat(og_metric_mask_comb_pbfp,og_metric_mask_comb_pbfpnds2)
 # check which is better
 # diff_mask_comb_pbfpnds2 = og_metric_mask_comb_pbfpnds2 - og_metric_mask_comb_pbfp
@@ -339,6 +393,7 @@ get_pairedWilcoxStat(og_metric_mask_comb_pbfp,og_metric_mask_comb_pbfpnds2)
 get_pairedWilcoxStat(og_metric_mask_comb_256b,og_metric_mask_comb_256bnds3)
 get_pairedWilcoxStat(og_metric_mask_comb_512b,og_metric_mask_comb_512bnds3)
 get_pairedWilcoxStat(og_metric_mask_comb_1024b,og_metric_mask_comb_1024bnds3)
+get_pairedWilcoxStat(og_metric_mask_comb_2048b,og_metric_mask_comb_2048bnds3)
 get_pairedWilcoxStat(og_metric_mask_comb_pbfp,og_metric_mask_comb_pbfpnds3)
 
 #### mask cell
@@ -348,16 +403,19 @@ get_pairedWilcoxStat(og_metric_mask_comb_pbfp,og_metric_mask_comb_pbfpnds3)
 get_pairedWilcoxStat(og_metric_mask_cell_256b,og_metric_mask_cell_256bnds1)
 get_pairedWilcoxStat(og_metric_mask_cell_512b,og_metric_mask_cell_512bnds1)
 get_pairedWilcoxStat(og_metric_mask_cell_1024b,og_metric_mask_cell_1024bnds1)
+get_pairedWilcoxStat(og_metric_mask_cell_2048b,og_metric_mask_cell_2048bnds1)
 get_pairedWilcoxStat(og_metric_mask_cell_pbfp,og_metric_mask_cell_pbfpnds1)
 
 get_pairedWilcoxStat(og_metric_mask_cell_256b,og_metric_mask_cell_256bnds2)
 get_pairedWilcoxStat(og_metric_mask_cell_512b,og_metric_mask_cell_512bnds2)
 get_pairedWilcoxStat(og_metric_mask_cell_1024b,og_metric_mask_cell_1024bnds2)
+get_pairedWilcoxStat(og_metric_mask_cell_2048b,og_metric_mask_cell_2048bnds2)
 get_pairedWilcoxStat(og_metric_mask_cell_pbfp,og_metric_mask_cell_pbfpnds2)
 
 get_pairedWilcoxStat(og_metric_mask_cell_256b,og_metric_mask_cell_256bnds3)
 get_pairedWilcoxStat(og_metric_mask_cell_512b,og_metric_mask_cell_512bnds3)
 get_pairedWilcoxStat(og_metric_mask_cell_1024b,og_metric_mask_cell_1024bnds3)
+get_pairedWilcoxStat(og_metric_mask_cell_2048b,og_metric_mask_cell_2048bnds3)
 get_pairedWilcoxStat(og_metric_mask_cell_pbfp,og_metric_mask_cell_pbfpnds3)
 
 
@@ -368,16 +426,19 @@ get_pairedWilcoxStat(og_metric_mask_cell_pbfp,og_metric_mask_cell_pbfpnds3)
 get_pairedWilcoxStat(og_metric_mask_drug_256b,og_metric_mask_drug_256bnds1)
 get_pairedWilcoxStat(og_metric_mask_drug_512b,og_metric_mask_drug_512bnds1)
 get_pairedWilcoxStat(og_metric_mask_drug_1024b,og_metric_mask_drug_1024bnds1)
+get_pairedWilcoxStat(og_metric_mask_drug_2048b,og_metric_mask_drug_2048bnds1)
 get_pairedWilcoxStat(og_metric_mask_drug_pbfp,og_metric_mask_drug_pbfpnds1)
 
 get_pairedWilcoxStat(og_metric_mask_drug_256b,og_metric_mask_drug_256bnds2)
 get_pairedWilcoxStat(og_metric_mask_drug_512b,og_metric_mask_drug_512bnds2)
 get_pairedWilcoxStat(og_metric_mask_drug_1024b,og_metric_mask_drug_1024bnds2)
+get_pairedWilcoxStat(og_metric_mask_drug_2048b,og_metric_mask_drug_2048bnds2)
 get_pairedWilcoxStat(og_metric_mask_drug_pbfp,og_metric_mask_drug_pbfpnds2)
 
 get_pairedWilcoxStat(og_metric_mask_drug_256b,og_metric_mask_drug_256bnds3)
 get_pairedWilcoxStat(og_metric_mask_drug_512b,og_metric_mask_drug_512bnds3)
 get_pairedWilcoxStat(og_metric_mask_drug_1024b,og_metric_mask_drug_1024bnds3)
+get_pairedWilcoxStat(og_metric_mask_drug_2048b,og_metric_mask_drug_2048bnds3)
 get_pairedWilcoxStat(og_metric_mask_drug_pbfp,og_metric_mask_drug_pbfpnds3)
 
 
