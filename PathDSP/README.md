@@ -6,6 +6,15 @@ Source code: <https://github.com/TangYiChing/PathDSP>.
 
 Python 3.9.7
 
+## Environment
+
+numpy 1.23.5
+
+torch 2.5.1
+
+shap 0.46.0
+
+
 ## Details about each file and folder
 Please download everything below before running code. Thank you!
 ### Additional Data
